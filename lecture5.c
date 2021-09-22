@@ -4,7 +4,7 @@
 
 #include<stdio.h>
 
-int main(void){
+void lecture5(){
 
     printf("Demonstrating do-while loop\n");
 
