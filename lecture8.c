@@ -9,12 +9,11 @@
 
 void lecture8(){
     // Factorial
-    printf("Factorial:\n")
+    printf("Factorial:\n");
     long factorialResult = factorial(10);
     printf("Result of 10!: %d\n", factorialResult);
 
-    printf("\nTowers of Hanoi problem: ");
-    towersOfHanoi(3, 'A', 'B', 'C');
+
 
 }
 
@@ -28,14 +27,5 @@ long factorial(long number){
     }
 }
 
-// Solves the towers of hanoi problem using recursion
-void towersOfHanoi(int n, char x, char y, char z){
-    if (n > 0){
-        towersOfHanoi(n - 1, x, z, y);
-        printf("/n%c to %c", x, y);
-        towersOfHanoi(n - 1, z, y, x);
-    } else{
 
-    }
-}
 
