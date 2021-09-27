@@ -8,7 +8,7 @@
 #include "lecture8.h"
 
 int main(void){
-    // Run code for lecture 5
+    // Lecture 5
     printf("Lecture 5\n");
     lecture5();
 

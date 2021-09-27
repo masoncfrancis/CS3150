@@ -9,4 +9,6 @@ void lecture8();
 
 long factorial(long number);
 
+void towersOfHanoi(int n, char x, char y, char z);
+
 #endif //CS3150_LECTURE8_H
