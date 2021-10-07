@@ -14,7 +14,6 @@ void lecture8(){
     printf("Result of 10!: %d\n", factorialResult);
 
 
-
 }
 
 // Returns the factorial of 'number'
