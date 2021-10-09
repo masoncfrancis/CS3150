@@ -7,10 +7,10 @@
 
 int masonAssignment1(){
     printf("\nProblem 3\n");
-
+    problem3();
 
     printf("\nProblem 6\n");
-    problem6();
+    //problem6();
 
     printf("\nProblem 9\n");
     problem9();
@@ -22,9 +22,33 @@ void problem3(){
     char input[11];
 
     // Prompt the user for input
+    printf("Enter an integer: ");
     scanf("%s", input);
     int values[10];
-    // @TODO finish implementing problem 3
+
+
+    int count = 0;
+    do {
+        if (input[count] != NULL){
+            values[count] = (int) (input[count] - '0');
+        }
+
+        count++;
+    } while (input[count] != '\0' || input[count] != NULL);
+    if (count != 0){
+        count--;
+    }
+
+    int total = 0;
+
+
+    printf("\nThe digits of the given number were: ");
+    for (int i = 0; values[i] < 10 && values[i] > 0; i++) {
+        printf("%d, ", values[i]);
+        total += values[i];
+    }
+    printf("\nThe sum of all digits is %d\n", total);
+
 }
 
 void problem6(){
@@ -32,7 +56,7 @@ void problem6(){
 
     // Gather input from user
     for (int i = 0; i < 10; i++) {
-        printf("Enter a value: ");
+        printf("Enter an integer value: ");
         int input;
         scanf("%d", &input);
         values[i] = input;
