@@ -8,7 +8,9 @@
 #include "lecture8.h"
 #include "Assignments/Assignment 1/MasonAssignment1.h"
 
+
 int main(void){
+
     /*// Lecture 5
     printf("Lecture 5\n");
     lecture5();
@@ -22,7 +24,7 @@ int main(void){
     lecture8();*/
 
     // Assignment 1
-    printf("\nAssignment 1\n");
+    printf("\nAssignment 1 - CS 2450");
     masonAssignment1();
 
     return 0;

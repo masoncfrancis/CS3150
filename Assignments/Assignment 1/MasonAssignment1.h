@@ -13,4 +13,6 @@ void problem6();
 
 void problem9();
 
+void problem12();
+
 #endif //CS3150_MASONASSIGNMENT1_H
