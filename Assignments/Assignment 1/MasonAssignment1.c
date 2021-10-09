@@ -7,16 +7,16 @@
 
 int masonAssignment1() {
     printf("\nProblem 3\n");
-    problem3();
+    //problem3();
 
     printf("\nProblem 6\n");
-    problem6();
+    //problem6();
 
     printf("\nProblem 9\n");
-    problem9();
+    //problem9();
 
     printf("\nProblem 12\n");
-    problem12();
+    //problem12();
 
     return 0;
 }
@@ -78,11 +78,37 @@ void problem6() {
     }
 }
 
+// Multiplies two matrices
 void problem9() {
+    int array1[][3] = {{1, 2, 3},
+                  {3, 2, 1}};
+
+    int array2[][3] = {{4, 5, 6},
+                  {2, 3, 4},
+                  {8, 7, 6}};
+
+    int productArray[2][3];
+
+    printf("Resulting matrix:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++){
+            int singleTotal = 0;
+            for (int k = 0; k < 3; k++){
+                int product = array1[i][k] * array2[k][j];
+                singleTotal += product;
+            }
+            printf("%d, ", singleTotal);
+            productArray[i][j] = singleTotal;
+
+        }
+        printf("\n");
+
+    }
 
 }
 
 void problem12() {
+
 
 }
 
