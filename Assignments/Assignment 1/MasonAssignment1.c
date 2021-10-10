@@ -7,16 +7,16 @@
 
 int masonAssignment1() {
     printf("\nProblem 3\n");
-    //problem3();
+    problem3();
 
     printf("\nProblem 6\n");
-    //problem6();
+    problem6();
 
     printf("\nProblem 9\n");
-    //problem9();
+    problem9();
 
     printf("\nProblem 12\n");
-    //problem12();
+    problem12();
 
     return 0;
 }
@@ -109,6 +109,61 @@ void problem9() {
 
 void problem12() {
 
+    printf("Enter one or more words: ");
+    char input[100];
+
+    fgets(input, 100, stdin);
+
+    // Count how many letters there are in the char array
+    int letterCount = 0;
+    for(int i = 0; i < 100; i++){
+        if (input[i] == 10){
+            break;
+        } else if ((input[i] >= 65 && input[i] <= 90) || (input[i] >= 97 && input[i] <= 122)){
+            letterCount++;
+        }
+    }
+
+    // Create array to contain the appropriate number of letters
+    // fill it with letters from the string, ignoring any non-letter characters
+    char letters[letterCount];
+    int letterArrayIndex = 0;
+    for (int i = 0; i < 100; i++) {
+        if (input[i] == 10){
+            break;
+        }
+        if ((input[i] >= 65 && input[i] <= 90) || (input[i] >= 97 && input[i] <= 122)){
+            letters[letterArrayIndex] = input[i];
+            letterArrayIndex++;
+        }
+    }
+
+    int palindromeResult = testPalindrome(letters, letterCount, 0);
+
+    switch (palindromeResult) {
+        case 0:
+            printf("\nThe string is not a palindrome");
+            break;
+        case 1:
+            printf("\nThe string is a palindrome");
+            break;
+    }
 
 }
+
+int testPalindrome(char charArray[], int arrayLength, int currentIndex){
+    int maxIndex = arrayLength - 1;
+    int maxCheckedIndex = (arrayLength / 2) + (arrayLength % 2);
+
+    if (currentIndex == maxCheckedIndex && charArray[currentIndex] == charArray[maxIndex - currentIndex]) { // Base case
+        return 1;
+    } else if (charArray[currentIndex] != charArray[maxIndex - currentIndex]){ // Base case
+        return 0;
+    } else {
+        return testPalindrome(charArray, arrayLength, currentIndex + 1);
+    }
+
+
+}
+
 

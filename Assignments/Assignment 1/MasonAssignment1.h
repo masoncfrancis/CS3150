@@ -15,4 +15,6 @@ void problem9();
 
 void problem12();
 
+int testPalindrome(char charArray[], int arrayLength, int currentIndex);
+
 #endif //CS3150_MASONASSIGNMENT1_H
